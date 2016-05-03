@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
   # renders the home page
-def home
-  @name = current_user ? @current_user.username : "Ironhacker"
-end
+  def home
+    @name = current_user ? current_user.username : "Ironhacker"
+  end
 
   def index
     @users = User.all
